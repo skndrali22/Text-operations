@@ -22,7 +22,11 @@ export default function Navbar(props) {
 
 
 
-        
+
+
+
+
+
         <button
           className="navbar-toggler"
           type="button"
