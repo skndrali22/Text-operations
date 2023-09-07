@@ -14,19 +14,7 @@ export default function Navbar(props) {
         {/* <a className="navbar-brand" href="#">
           {props.title}
         </a> */}
-
-
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis modi illum eligendi ut culpa atque ex maxime eum placeat tempora, aliquid, facilis fugit rerum, minus possimus enim natus et?</p>
-
-
-
-
-
-
-
-
-
-
         <button
           className="navbar-toggler"
           type="button"
