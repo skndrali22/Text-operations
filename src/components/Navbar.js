@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -14,9 +14,6 @@ export default function Navbar(props) {
         {/* <a className="navbar-brand" href="#">
           {props.title}
         </a> */}
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis modi illum eligendi ut culpa atque ex maxime eum placeat tempora, aliquid, facilis fugit rerum, minus possimus enim natus et?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa perferendis voluptatum, sapiente velit totam fugiat, omnis natus alias nisi earum aut accusamus debitis, libero aliquam praesentium maiores repellat nemo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum unde magni, mollitia facere at laboriosam laborum quibusdam minus asperiores culpa dolorem doloremque vitae! Officia cumque sit ea provident odit!</p>
         <button
           className="navbar-toggler"
           type="button"
@@ -40,7 +37,17 @@ export default function Navbar(props) {
                 {props.aboutText}
               </Link>
             </li>
-            
+            <li>
+              <Link className="nav-link" aria-current="page" to="/signSeller">
+                Seller Signup
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" aria-current="page" to="/signBuyer">
+                Buyer Signup
+              </Link>
+            </li>
+
             {/* <li className="nav-item">
               <a className="nav-link" href="#">
                 {props.aboutText}
@@ -63,7 +70,11 @@ export default function Navbar(props) {
               Search
             </button>
           </form> */}
-          <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+          <div
+            className={`form-check form-switch text-${
+              props.mode === "light" ? "dark" : "light"
+            }`}
+          >
             <input
               onClick={props.toggleMode}
               className="form-check-input"
