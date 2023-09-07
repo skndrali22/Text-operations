@@ -5,6 +5,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
+import SignUpForm from "./components/SignUpForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // Import Routes
 
 function App() {
@@ -36,15 +37,6 @@ function App() {
 
   return (
     <>
-      {/* <Navbar
-        title="TextUtils"
-        aboutText="About TextUtils"
-        mode={mode}
-        toggleMode={toggleMode}
-      />
-
-      <Alert alert={alert} /> */}
-
       <BrowserRouter>
         <Navbar
           title="TextUtils"
@@ -54,29 +46,28 @@ function App() {
         />
         <Alert alert={alert} />
 
-
         <div className="container">
           <Routes>
+            <Route path="/signSeller" element={<SignUpForm userType="seller" />} />
             
-            <Route  path="/about" element={<About />} />
-            
+            <Route path="/signBuyer" element={<SignUpForm userType="buyer" />}/>
+
+            <Route path="/about" element={<About />} />
+
             <Route
-               path="/"
+              path="/"
               element={
                 <TextForm
                   alert={showalert}
                   heading="Enter the text to analyze"
                   mode={mode}
                 />
-              } 
+              }
             />
-            <Route exact path="/home" element={<Home mode={mode} />}>
-
-            </Route>
+            <Route exact path="/home" element={<Home mode={mode} />}></Route>
           </Routes>
         </div>
       </BrowserRouter>
-     
     </>
   );
 }
