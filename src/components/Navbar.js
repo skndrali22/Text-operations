@@ -16,7 +16,7 @@ export default function Navbar(props) {
         </a> */}
 
 
-
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis modi illum eligendi ut culpa atque ex maxime eum placeat tempora, aliquid, facilis fugit rerum, minus possimus enim natus et?</p>
 
 
 
