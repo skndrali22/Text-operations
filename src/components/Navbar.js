@@ -37,16 +37,7 @@ export default function Navbar(props) {
                 {props.aboutText}
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                {props.aboutText}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                {props.aboutText}
-              </Link>
-            </li>
+            
             {/* <li className="nav-item">
               <a className="nav-link" href="#">
                 {props.aboutText}
