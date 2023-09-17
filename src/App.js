@@ -65,6 +65,7 @@ function App() {
               }
             />
             <Route exact path="/home" element={<Home mode={mode} />}></Route>
+
           </Routes>
         </div>
       </BrowserRouter>
