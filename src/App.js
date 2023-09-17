@@ -13,17 +13,20 @@ function App() {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
+      modetext("Enable Light Mode");
       showalert("Dark mode has been enabled", "success");
       document.title = "TextUtils - Dark mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
+      modetext("Enable Dark Mode");
       showalert("Light mode has been enabled", "success");
       document.title = "TextUtils - Light mode";
     }
   };
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
+  const [DLmode, modetext] = useState("Enable Dark Mode")
 
   const showalert = (message, type) => {
     setAlert({
@@ -42,6 +45,7 @@ function App() {
           title="TextUtils"
           aboutText="About TextUtils"
           mode={mode}
+          DLmode = {DLmode}
           toggleMode={toggleMode}
         />
         <Alert alert={alert} />
