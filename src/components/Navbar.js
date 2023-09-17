@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
+
   return (
     <nav
       className={`navbar navbar-expand-lg  navbar-${props.mode} bg-${props.mode}`}
@@ -85,8 +86,9 @@ export default function Navbar(props) {
             <label
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
+              style={{color:props.mode==='dark'?'white':'black'}}
             >
-              Enable Dark mode
+              {props.DLmode}
             </label>
           </div>
         </div>
