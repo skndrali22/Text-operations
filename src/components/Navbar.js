@@ -88,6 +88,7 @@ export default function Navbar(props) {
               htmlFor="flexSwitchCheckDefault"
               style={{color:props.mode==='dark'?'white':'black'}}
             >
+              
               {props.DLmode}
             </label>
           </div>
