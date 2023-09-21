@@ -27,6 +27,7 @@ function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
   const [DLmode, modetext] = useState("Enable Dark Mode")
+  // const [aboutHead, aboutHeading] = useState("About us")
 
   const showalert = (message, type) => {
     setAlert({
@@ -56,7 +57,7 @@ function App() {
             
             <Route path="/signBuyer" element={<SignUpForm userType="buyer" />}/>
 
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About aboutHeading="About us" mode={mode} />} />
 
             <Route
               path="/"
