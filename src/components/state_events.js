@@ -42,9 +42,9 @@ export default function TextForm(props) {
           rows="8"
           style={{backgroundColor:props.mode==='dark'?'gray':'white' ,color:props.mode==='dark'?'white':'#042743'}}
         ></textarea>
-        <button className="btn btn-primary my-3 mx-2" onClick={handleUpClick}>Convert to upper case</button>
-        <button className="btn btn-primary mx-2 " onClick={handleDnClick}>Convert to lower case</button>
-        <button className="btn btn-primary " onClick={clearText}>Clear text</button>
+        <button  disabled = {text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleUpClick}>Convert to upper case</button>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-2 " onClick={handleDnClick}>Convert to lower case</button>
+        <button disabled = {text.length === 0} className="btn btn-primary " onClick={clearText}>Clear text</button>
       </div>
     </div>
 
